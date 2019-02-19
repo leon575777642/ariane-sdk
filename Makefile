@@ -96,7 +96,7 @@ pk: install-dir $(RISCV)/bin/riscv64-unknown-elf-gcc
 all: gnu-toolchain-newlib gnu-toolchain-libc fesvr isa-sim tests pk
 
 
-vmlinux: $(buildroot_defconfig) $(linux_defconfig) $(busybox_defconfig) $(RISCV)/bin/riscv64-unknown-elf-gcc $(RISCV)/bin/riscv64-unknown-linux-gnu-gcc
+vmlinux: $(buildroot_defconfig) $(linux_defconfig) $(busybox_defconfig)
 	mkdir -p build
 	make -C buildroot clean
 	make -C buildroot defconfig BR2_DEFCONFIG=../configs/buildroot_defconfig
